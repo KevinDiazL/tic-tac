@@ -11,13 +11,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Righteous&family=Young+Serif&display=swap"
         rel="stylesheet">
+    <script src="./accion.js" defer></script>
 </head>
 
-<body class="bg-[#192a32] h-full font-[Outfit]">
+<body class="bg-[#192a32] font-[Outfit]">
     <header class="flex flex-row justify-between m-2 max-w-[400px] mx-auto">
         <img src="./assets/images/SVG/logo.svg" alt="" class="w-16">
 
-        <button class="flex flex-row text-white bg-[#1f3540] gap-2 p-2 rounded-sm">
+        <button class="flex flex-row text-white bg-[#1f3540] gap-2 p-2 rounded-sm" id="turn">
             <svg fill="currentColor" id="icon-x-win" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="w-5">
                 <path
                     d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
@@ -36,32 +37,44 @@
     </header>
     <br>
     <br>
-    <main class="grid grid-cols-3 h-[80%]  gap-8 pt-5 max-w-[400px] mx-auto">
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+    <main class="grid grid-cols-3 h-[80%]  gap-8 pt-5 max-w-[400px] mx-auto" id="container">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="0">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="1">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="2">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="3">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="4">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="5">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="6">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="7">
         </div>
-        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto">
+        <div class="bg-[#1f3540] w-20 h-20 rounded-xl shadow-[0px_7px_rgb(17,28,34)] mx-auto p-2 overflow-hidden"
+            data-id="8">
         </div>
+    </main>
+    <footer class="grid grid-cols-3 h-[80%]  gap-8 pt-5 max-w-[400px] mx-auto">
         <button class="w-20 h-14 bg-[#31c4be] mx-auto rounded-xl">X YOU <br><span
                 class="text-2xl font-semibold">0</span></button>
         <button class="w-20 h-14 bg-[#a8bec9] mx-auto rounded-xl">TIES<br><span class="text-2xl font-semibold">0</span>
         </button>
         <button class="w-20 h-14 bg-[#f2b237] mx-auto rounded-xl">O (CPU)<br><span
                 class="text-2xl font-semibold">0</span></button>
-    </main>
+    </footer>
+
 </body>
 
 </html>
